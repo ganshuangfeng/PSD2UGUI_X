@@ -19,7 +19,7 @@
     <RootNamespace></RootNamespace>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <AssemblyName>Assembly-CSharp</AssemblyName>
+    <AssemblyName>UnityEditor.TestRunner</AssemblyName>
     <TargetFramework>netstandard2.1</TargetFramework>
     <BaseDirectory>.</BaseDirectory>
   </PropertyGroup>
@@ -54,7 +54,7 @@
     <UnityProjectGenerator>Package</UnityProjectGenerator>
     <UnityProjectGeneratorVersion>2.0.22</UnityProjectGeneratorVersion>
     <UnityProjectGeneratorStyle>SDK</UnityProjectGeneratorStyle>
-    <UnityProjectType>Game:1</UnityProjectType>
+    <UnityProjectType>Editor:5</UnityProjectType>
     <UnityBuildTarget>StandaloneOSX:2</UnityBuildTarget>
     <UnityVersion>2021.3.34f1</UnityVersion>
   </PropertyGroup>
@@ -62,56 +62,172 @@
     <Analyzer Include="/Users/ganshuangfeng/.vscode/extensions/visualstudiotoolsforunity.vstuc-0.9.4/Analyzers/Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets/PSD2UIForm/ScriptableSignleton.cs" />
-    <Compile Include="Assets/PSD2UIForm/Psd2UIFormConverter.cs" />
-    <Compile Include="Assets/PSD2UIForm/UIHelpers/TMPButtonHelper.cs" />
-    <Compile Include="Assets/PSD2UIForm/Utility.Assembly.cs" />
-    <Compile Include="Assets/PSD2UIForm/UIStringKey.cs" />
-    <Compile Include="Assets/PSD2UIForm/UIHelpers/TMPDropdownHelper.cs" />
-    <Compile Include="Assets/PSD2UIForm/UIHelpers/RawImageHelper.cs" />
-    <Compile Include="Assets/PSD2UIForm/UIHelpers/TMPTextHelper.cs" />
-    <Compile Include="Assets/PSD2UIForm/UIHelpers/TMPToggleHelper.cs" />
-    <Compile Include="Assets/PSD2UIForm/UIHelpers/ImageHelper.cs" />
-    <Compile Include="Assets/PSD2UIForm/PsdLayerNode.cs" />
-    <Compile Include="Assets/PSD2UIForm/UIHelpers/DropdownHelper.cs" />
-    <Compile Include="Assets/PSD2UIForm/UIHelpers/InputFieldHelper.cs" />
-    <Compile Include="Assets/PSD2UIForm/PsdLayerType.cs" />
-    <Compile Include="Assets/PSD2UIForm/UIHelpers/TMPInputFieldHelper.cs" />
-    <Compile Include="Assets/PSD2UIForm/UIHelpers/MaskHelper.cs" />
-    <Compile Include="Assets/PSD2UIForm/UIHelpers/ToggleHelper.cs" />
-    <Compile Include="Assets/PSD2UIForm/Psd2UIFormSettings.cs" />
-    <Compile Include="Assets/PSD2UIForm/UIHelpers/SliderHelper.cs" />
-    <Compile Include="Assets/PSD2UIForm/UIHelpers/ScrollViewHelper.cs" />
-    <Compile Include="Assets/PSD2UIForm/UIHelpers/FillColorHelper.cs" />
-    <Compile Include="Assets/PSD2UIForm/UIHelpers/ButtonHelper.cs" />
-    <Compile Include="Assets/PSD2UIForm/UGUIParser.cs" />
-    <Compile Include="Assets/PSD2UIForm/UIHelpers/UIHelperBase.cs" />
-    <Compile Include="Assets/PSD2UIForm/ReadOnlyFieldAttribute.cs" />
-    <Compile Include="Assets/PSD2UIForm/UIHelpers/TextHelper.cs" />
-    <Compile Include="Assets/PSD2UIForm/AsposePsdExtension.cs" />
+    <Compile Include="Library/PackageCache/com.unity.test-framework@1.1.33/UnityEditor.TestRunner/GUI/TestListTreeView/TestTreeViewItem.cs" />
+    <Compile Include="Library/PackageCache/com.unity.test-framework@1.1.33/UnityEditor.TestRunner/TestRun/Tasks/LegacyPlayModeRunTask.cs" />
+    <Compile Include="Library/PackageCache/com.unity.test-framework@1.1.33/UnityEditor.TestRunner/TestRunner/Callbacks/RerunCallback.cs" />
+    <Compile Include="Library/PackageCache/com.unity.test-framework@1.1.33/UnityEditor.TestRunner/TestRunner/Messages/EnterPlayMode.cs" />
+    <Compile Include="Library/PackageCache/com.unity.test-framework@1.1.33/UnityEditor.TestRunner/TestRun/Tasks/PrebuildSetupTask.cs" />
+    <Compile Include="Library/PackageCache/com.unity.test-framework@1.1.33/UnityEditor.TestRunner/TestRunner/EditModeRunner.cs" />
+    <Compile Include="Library/PackageCache/com.unity.test-framework@1.1.33/UnityEditor.TestRunner/Api/Analytics/AnalyticsTestCallback.cs" />
+    <Compile Include="Library/PackageCache/com.unity.test-framework@1.1.33/UnityEditor.TestRunner/TestLaunchers/RemoteTestResultReciever.cs" />
+    <Compile Include="Library/PackageCache/com.unity.test-framework@1.1.33/UnityEditor.TestRunner/TestLaunchers/RuntimeTestLauncherBase.cs" />
+    <Compile Include="Library/PackageCache/com.unity.test-framework@1.1.33/UnityEditor.TestRunner/TestRunner/Callbacks/WindowResultUpdaterDataHolder.cs" />
+    <Compile Include="Library/PackageCache/com.unity.test-framework@1.1.33/UnityEditor.TestRunner/UnityTestProtocol/Message.cs" />
+    <Compile Include="Library/PackageCache/com.unity.test-framework@1.1.33/UnityEditor.TestRunner/TestRunner/Callbacks/RerunCallbackData.cs" />
+    <Compile Include="Library/PackageCache/com.unity.test-framework@1.1.33/UnityEditor.TestRunner/TestLaunchers/RemotePlayerTestController.cs" />
+    <Compile Include="Library/PackageCache/com.unity.test-framework@1.1.33/UnityEditor.TestRunner/TestLaunchers/PlatformSetup/SwitchPlatformSetup.cs" />
+    <Compile Include="Library/PackageCache/com.unity.test-framework@1.1.33/UnityEditor.TestRunner/NUnitExtension/Attributes/AssetPipelineIgnore.cs" />
+    <Compile Include="Library/PackageCache/com.unity.test-framework@1.1.33/UnityEditor.TestRunner/TestLaunchers/PostbuildCleanupAttributeFinder.cs" />
+    <Compile Include="Library/PackageCache/com.unity.test-framework@1.1.33/UnityEditor.TestRunner/GUI/Views/PlayModeTestListGUI.cs" />
+    <Compile Include="Library/PackageCache/com.unity.test-framework@1.1.33/UnityEditor.TestRunner/GUI/TestListBuilder/TestFilterSettings.cs" />
+    <Compile Include="Library/PackageCache/com.unity.test-framework@1.1.33/UnityEditor.TestRunner/Api/TestAdaptor.cs" />
+    <Compile Include="Library/PackageCache/com.unity.test-framework@1.1.33/UnityEditor.TestRunner/TestRunner/Messages/RecompileScripts.cs" />
+    <Compile Include="Library/PackageCache/com.unity.test-framework@1.1.33/UnityEditor.TestRunner/Api/ITestResultAdaptor.cs" />
+    <Compile Include="Library/PackageCache/com.unity.test-framework@1.1.33/UnityEditor.TestRunner/RequireApiProfileAttribute.cs" />
+    <Compile Include="Library/PackageCache/com.unity.test-framework@1.1.33/UnityEditor.TestRunner/TestLaunchers/AttributeFinderBase.cs" />
+    <Compile Include="Library/PackageCache/com.unity.test-framework@1.1.33/UnityEditor.TestRunner/TestRun/Tasks/TestTaskBase.cs" />
+    <Compile Include="Library/PackageCache/com.unity.test-framework@1.1.33/UnityEditor.TestRunner/GUI/TestListTreeView/Icons.cs" />
+    <Compile Include="Library/PackageCache/com.unity.test-framework@1.1.33/UnityEditor.TestRunner/UnityTestProtocol/UnityTestProtocolListener.cs" />
+    <Compile Include="Library/PackageCache/com.unity.test-framework@1.1.33/UnityEditor.TestRunner/TestLaunchers/PlatformSetup/AndroidPlatformSetup.cs" />
+    <Compile Include="Library/PackageCache/com.unity.test-framework@1.1.33/UnityEditor.TestRunner/Api/ITestAdaptor.cs" />
+    <Compile Include="Library/PackageCache/com.unity.test-framework@1.1.33/UnityEditor.TestRunner/Api/ITestRunSettings.cs" />
+    <Compile Include="Library/PackageCache/com.unity.test-framework@1.1.33/UnityEditor.TestRunner/CommandLineTest/ISettingsBuilder.cs" />
+    <Compile Include="Library/PackageCache/com.unity.test-framework@1.1.33/UnityEditor.TestRunner/Api/Filter.cs" />
+    <Compile Include="Library/PackageCache/com.unity.test-framework@1.1.33/UnityEditor.TestRunner/TestRun/TestJobDataHolder.cs" />
+    <Compile Include="Library/PackageCache/com.unity.test-framework@1.1.33/UnityEditor.TestRunner/TestRunner/Utils/CachingTestListProvider.cs" />
+    <Compile Include="Library/PackageCache/com.unity.test-framework@1.1.33/UnityEditor.TestRunner/Api/ICallbacks.cs" />
+    <Compile Include="Library/PackageCache/com.unity.test-framework@1.1.33/UnityEditor.TestRunner/TestRunner/Utils/IEditorAssembliesProxy.cs" />
+    <Compile Include="Library/PackageCache/com.unity.test-framework@1.1.33/UnityEditor.TestRunner/Api/TestMode.cs" />
+    <Compile Include="Library/PackageCache/com.unity.test-framework@1.1.33/UnityEditor.TestRunner/CommandLineTest/LogSavingCallbacks.cs" />
+    <Compile Include="Library/PackageCache/com.unity.test-framework@1.1.33/UnityEditor.TestRunner/TestRun/TestRunCanceledException.cs" />
+    <Compile Include="Library/PackageCache/com.unity.test-framework@1.1.33/UnityEditor.TestRunner/GUI/TestListGuiHelper.cs" />
+    <Compile Include="Library/PackageCache/com.unity.test-framework@1.1.33/UnityEditor.TestRunner/TestRunnerWindowSettings.cs" />
+    <Compile Include="Library/PackageCache/com.unity.test-framework@1.1.33/UnityEditor.TestRunner/TestLaunchers/PlatformSetup/LuminPlatformSetup.cs" />
+    <Compile Include="Library/PackageCache/com.unity.test-framework@1.1.33/UnityEditor.TestRunner/TestLaunchers/DelayedCallback.cs" />
+    <Compile Include="Library/PackageCache/com.unity.test-framework@1.1.33/UnityEditor.TestRunner/Api/CallbacksHolder.cs" />
+    <Compile Include="Library/PackageCache/com.unity.test-framework@1.1.33/UnityEditor.TestRunner/CommandLineTest/ResultsWriter.cs" />
+    <Compile Include="Library/PackageCache/com.unity.test-framework@1.1.33/UnityEditor.TestRunner/TestLaunchers/RemotePlayerLogController.cs" />
+    <Compile Include="Library/PackageCache/com.unity.test-framework@1.1.33/UnityEditor.TestRunner/Api/ITestTreeRebuildCallbacks.cs" />
+    <Compile Include="Library/PackageCache/com.unity.test-framework@1.1.33/UnityEditor.TestRunner/TestRunner/Utils/ITestListCache.cs" />
+    <Compile Include="Library/PackageCache/com.unity.test-framework@1.1.33/UnityEditor.TestRunner/CommandLineTest/ExitCallbacksDataHolder.cs" />
+    <Compile Include="Library/PackageCache/com.unity.test-framework@1.1.33/UnityEditor.TestRunner/TestLaunchers/PlayerLauncherContextSettings.cs" />
+    <Compile Include="Library/PackageCache/com.unity.test-framework@1.1.33/UnityEditor.TestRunner/Api/CallbacksDelegatorListener.cs" />
+    <Compile Include="Library/PackageCache/com.unity.test-framework@1.1.33/UnityEditor.TestRunner/TestLaunchers/PlatformSetup/IPlatformSetup.cs" />
+    <Compile Include="Library/PackageCache/com.unity.test-framework@1.1.33/UnityEditor.TestRunner/TestSettings/ITestSettings.cs" />
+    <Compile Include="Library/PackageCache/com.unity.test-framework@1.1.33/UnityEditor.TestRunner/GUI/TestListBuilder/TestTreeViewBuilder.cs" />
+    <Compile Include="Library/PackageCache/com.unity.test-framework@1.1.33/UnityEditor.TestRunner/CommandLineTest/SettingsBuilder.cs" />
+    <Compile Include="Library/PackageCache/com.unity.test-framework@1.1.33/UnityEditor.TestRunner/CommandLineTest/LogWriter.cs" />
+    <Compile Include="Library/PackageCache/com.unity.test-framework@1.1.33/UnityEditor.TestRunner/TestRunnerWindow.cs" />
+    <Compile Include="Library/PackageCache/com.unity.test-framework@1.1.33/UnityEditor.TestRunner/TestRunner/Utils/ITestListProvider.cs" />
+    <Compile Include="Library/PackageCache/com.unity.test-framework@1.1.33/UnityEditor.TestRunner/UnityTestProtocol/UnityTestProtocolStarter.cs" />
+    <Compile Include="Library/PackageCache/com.unity.test-framework@1.1.33/UnityEditor.TestRunner/CommandLineTest/ExecutionSettings.cs" />
+    <Compile Include="Library/PackageCache/com.unity.test-framework@1.1.33/UnityEditor.TestRunner/TestLaunchers/EditModeLauncher.cs" />
+    <Compile Include="Library/PackageCache/com.unity.test-framework@1.1.33/UnityEditor.TestRunner/Api/ICallbacksDelegator.cs" />
+    <Compile Include="Library/PackageCache/com.unity.test-framework@1.1.33/UnityEditor.TestRunner/Api/TestResultAdaptor.cs" />
+    <Compile Include="Library/PackageCache/com.unity.test-framework@1.1.33/UnityEditor.TestRunner/TestRun/TestJobData.cs" />
+    <Compile Include="Library/PackageCache/com.unity.test-framework@1.1.33/UnityEditor.TestRunner/TestRunner/Utils/TestListJob.cs" />
+    <Compile Include="Library/PackageCache/com.unity.test-framework@1.1.33/UnityEditor.TestRunner/TestLaunchers/PlayerLauncherBuildOptions.cs" />
+    <Compile Include="Library/PackageCache/com.unity.test-framework@1.1.33/UnityEditor.TestRunner/UnityTestProtocol/TestRunnerApiMapper.cs" />
+    <Compile Include="Library/PackageCache/com.unity.test-framework@1.1.33/UnityEditor.TestRunner/TestRunner/Callbacks/RerunCallbackInitializer.cs" />
+    <Compile Include="Library/PackageCache/com.unity.test-framework@1.1.33/UnityEditor.TestRunner/GUI/GuiHelper.cs" />
+    <Compile Include="Library/PackageCache/com.unity.test-framework@1.1.33/UnityEditor.TestRunner/GUI/UITestRunnerFilter.cs" />
+    <Compile Include="Library/PackageCache/com.unity.test-framework@1.1.33/UnityEditor.TestRunner/TestLaunchers/EditModeLauncherContextSettings.cs" />
+    <Compile Include="Library/PackageCache/com.unity.test-framework@1.1.33/UnityEditor.TestRunner/CommandLineTest/SetupException.cs" />
+    <Compile Include="Library/PackageCache/com.unity.test-framework@1.1.33/UnityEditor.TestRunner/TestRunner/EnumeratorStepHelper.cs" />
+    <Compile Include="Library/PackageCache/com.unity.test-framework@1.1.33/UnityEditor.TestRunner/TestRun/Tasks/FileCleanupVerifierTaskBase.cs" />
+    <Compile Include="Library/PackageCache/com.unity.test-framework@1.1.33/UnityEditor.TestRunner/Api/TestAdaptorFactory.cs" />
+    <Compile Include="Library/PackageCache/com.unity.test-framework@1.1.33/UnityEditor.TestRunner/GUI/AssetsDatabaseHelper.cs" />
+    <Compile Include="Library/PackageCache/com.unity.test-framework@1.1.33/UnityEditor.TestRunner/TestLaunchers/PlayerLauncher.cs" />
+    <Compile Include="Library/PackageCache/com.unity.test-framework@1.1.33/UnityEditor.TestRunner/Api/TestStatus.cs" />
+    <Compile Include="Library/PackageCache/com.unity.test-framework@1.1.33/UnityEditor.TestRunner/TestLaunchers/PlatformSetup/UwpPlatformSetup.cs" />
+    <Compile Include="Library/PackageCache/com.unity.test-framework@1.1.33/UnityEditor.TestRunner/TestRunner/Messages/WaitForDomainReload.cs" />
+    <Compile Include="Library/PackageCache/com.unity.test-framework@1.1.33/UnityEditor.TestRunner/TestRun/Tasks/RegisterFilesForCleanupVerificationTask.cs" />
+    <Compile Include="Library/PackageCache/com.unity.test-framework@1.1.33/UnityEditor.TestRunner/TestRun/TestJobRunner.cs" />
+    <Compile Include="Library/PackageCache/com.unity.test-framework@1.1.33/UnityEditor.TestRunner/TestRunner/Utils/EditorAssembliesProxy.cs" />
+    <Compile Include="Library/PackageCache/com.unity.test-framework@1.1.33/UnityEditor.TestRunner/TestRunner/Messages/ExitPlayMode.cs" />
+    <Compile Include="Library/PackageCache/com.unity.test-framework@1.1.33/UnityEditor.TestRunner/CommandLineTest/ExitCallbacks.cs" />
+    <Compile Include="Library/PackageCache/com.unity.test-framework@1.1.33/UnityEditor.TestRunner/Api/IErrorCallbacks.cs" />
+    <Compile Include="Library/PackageCache/com.unity.test-framework@1.1.33/UnityEditor.TestRunner/TestBuildAssemblyFilter.cs" />
+    <Compile Include="Library/PackageCache/com.unity.test-framework@1.1.33/UnityEditor.TestRunner/Api/ITestAdaptorFactory.cs" />
+    <Compile Include="Library/PackageCache/com.unity.test-framework@1.1.33/UnityEditor.TestRunner/TestRunner/Utils/IEditorLoadedTestAssemblyProvider.cs" />
+    <Compile Include="Library/PackageCache/com.unity.test-framework@1.1.33/UnityEditor.TestRunner/NUnitExtension/TestRunnerStateSerializer.cs" />
+    <Compile Include="Library/PackageCache/com.unity.test-framework@1.1.33/UnityEditor.TestRunner/TestRun/Tasks/BuildActionTaskBase.cs" />
+    <Compile Include="Library/PackageCache/com.unity.test-framework@1.1.33/UnityEditor.TestRunner/GUI/TestListTreeView/TestListTreeViewGUI.cs" />
+    <Compile Include="Library/PackageCache/com.unity.test-framework@1.1.33/UnityEditor.TestRunner/TestResultSerializer.cs" />
+    <Compile Include="Library/PackageCache/com.unity.test-framework@1.1.33/UnityEditor.TestRunner/TestRunner/Utils/IEditorCompilationInterfaceProxy.cs" />
+    <Compile Include="Library/PackageCache/com.unity.test-framework@1.1.33/UnityEditor.TestRunner/GUI/TestRunnerResult.cs" />
+    <Compile Include="Library/PackageCache/com.unity.test-framework@1.1.33/UnityEditor.TestRunner/TestSettings/TestSettings.cs" />
+    <Compile Include="Library/PackageCache/com.unity.test-framework@1.1.33/UnityEditor.TestRunner/TestRunner/Utils/ITestListCacheData.cs" />
+    <Compile Include="Library/PackageCache/com.unity.test-framework@1.1.33/UnityEditor.TestRunner/UnityTestProtocol/UtpDebuglogger.cs" />
+    <Compile Include="Library/PackageCache/com.unity.test-framework@1.1.33/UnityEditor.TestRunner/TestRunner/EditModePCHelper.cs" />
+    <Compile Include="Library/PackageCache/com.unity.test-framework@1.1.33/UnityEditor.TestRunner/TestRunner/Callbacks/WindowResultUpdater.cs" />
+    <Compile Include="Library/PackageCache/com.unity.test-framework@1.1.33/UnityEditor.TestRunner/Api/ExecutionSettings.cs" />
+    <Compile Include="Library/PackageCache/com.unity.test-framework@1.1.33/UnityEditor.TestRunner/TestLaunchers/PlaymodeLauncher.cs" />
+    <Compile Include="Library/PackageCache/com.unity.test-framework@1.1.33/UnityEditor.TestRunner/GUI/Views/EditModeTestListGUI.cs" />
+    <Compile Include="Library/PackageCache/com.unity.test-framework@1.1.33/UnityEditor.TestRunner/UnityTestProtocol/TestPlanMessage.cs" />
+    <Compile Include="Library/PackageCache/com.unity.test-framework@1.1.33/UnityEditor.TestRunner/Api/Analytics/AnalyticsReporter.cs" />
+    <Compile Include="Library/PackageCache/com.unity.test-framework@1.1.33/UnityEditor.TestRunner/TestRunner/EditmodeWorkItemFactory.cs" />
+    <Compile Include="Library/PackageCache/com.unity.test-framework@1.1.33/UnityEditor.TestRunner/GUI/TestRunnerUIFilter.cs" />
+    <Compile Include="Library/PackageCache/com.unity.test-framework@1.1.33/UnityEditor.TestRunner/TestRunner/Utils/TestListProvider.cs" />
+    <Compile Include="Library/PackageCache/com.unity.test-framework@1.1.33/UnityEditor.TestRunner/CommandLineParser/CommandLineOptionSet.cs" />
+    <Compile Include="Library/PackageCache/com.unity.test-framework@1.1.33/UnityEditor.TestRunner/Api/RunState.cs" />
+    <Compile Include="Library/PackageCache/com.unity.test-framework@1.1.33/UnityEditor.TestRunner/TestSettings/ITestSettingsDeserializer.cs" />
+    <Compile Include="Library/PackageCache/com.unity.test-framework@1.1.33/UnityEditor.TestRunner/UnityTestProtocol/ITestRunnerApiMapper.cs" />
+    <Compile Include="Library/PackageCache/com.unity.test-framework@1.1.33/UnityEditor.TestRunner/TestLaunchers/PlatformSetup/StadiaPlatformSetup.cs" />
+    <Compile Include="Library/PackageCache/com.unity.test-framework@1.1.33/UnityEditor.TestRunner/NUnitExtension/Attributes/ITestPlayerBuildModifier.cs" />
+    <Compile Include="Library/PackageCache/com.unity.test-framework@1.1.33/UnityEditor.TestRunner/Api/CallbacksDelegator.cs" />
+    <Compile Include="Library/PackageCache/com.unity.test-framework@1.1.33/UnityEditor.TestRunner/GUI/IGuiHelper.cs" />
+    <Compile Include="Library/PackageCache/com.unity.test-framework@1.1.33/UnityEditor.TestRunner/UnityTestProtocol/UtpMessageReporter.cs" />
+    <Compile Include="Library/PackageCache/com.unity.test-framework@1.1.33/UnityEditor.TestRunner/CommandLineTest/ResultsSavingCallbacks.cs" />
+    <Compile Include="Library/PackageCache/com.unity.test-framework@1.1.33/UnityEditor.TestRunner/TestRun/Tasks/BuildTestTreeTask.cs" />
+    <Compile Include="Library/PackageCache/com.unity.test-framework@1.1.33/UnityEditor.TestRunner/TestRun/Tasks/LegacyPlayerRunTask.cs" />
+    <Compile Include="Library/PackageCache/com.unity.test-framework@1.1.33/UnityEditor.TestRunner/TestRunner/Utils/TestListCache.cs" />
+    <Compile Include="Library/PackageCache/com.unity.test-framework@1.1.33/UnityEditor.TestRunner/GUI/IAssetsDatabaseHelper.cs" />
+    <Compile Include="Library/PackageCache/com.unity.test-framework@1.1.33/UnityEditor.TestRunner/TestLaunchers/PlayerLauncherTestRunSettings.cs" />
+    <Compile Include="Library/PackageCache/com.unity.test-framework@1.1.33/UnityEditor.TestRunner/TestLaunchers/PlatformSetup/ApplePlatformSetup.cs" />
+    <Compile Include="Library/PackageCache/com.unity.test-framework@1.1.33/UnityEditor.TestRunner/TestRun/Tasks/LegacyEditModeRunTask.cs" />
+    <Compile Include="Library/PackageCache/com.unity.test-framework@1.1.33/UnityEditor.TestRunner/Api/ICallbacksHolder.cs" />
+    <Compile Include="Library/PackageCache/com.unity.test-framework@1.1.33/UnityEditor.TestRunner/GUI/TestListBuilder/ResultSummarizer.cs" />
+    <Compile Include="Library/PackageCache/com.unity.test-framework@1.1.33/UnityEditor.TestRunner/UnityTestProtocol/TestStartedMessage.cs" />
+    <Compile Include="Library/PackageCache/com.unity.test-framework@1.1.33/UnityEditor.TestRunner/TestSettings/TestSettingsDeserializer.cs" />
+    <Compile Include="Library/PackageCache/com.unity.test-framework@1.1.33/UnityEditor.TestRunner/TestLaunchers/PlatformSetup/PlatformSpecificSetup.cs" />
+    <Compile Include="Library/PackageCache/com.unity.test-framework@1.1.33/UnityEditor.TestRunner/TestRun/Tasks/CleanupVerificationTask.cs" />
+    <Compile Include="Library/PackageCache/com.unity.test-framework@1.1.33/UnityEditor.TestRunner/TestRun/Tasks/SaveUndoIndexTask.cs" />
+    <Compile Include="Library/PackageCache/com.unity.test-framework@1.1.33/UnityEditor.TestRunner/UnityTestProtocol/TestFinishedMessage.cs" />
+    <Compile Include="Library/PackageCache/com.unity.test-framework@1.1.33/UnityEditor.TestRunner/NUnitExtension/Attributes/TestPlayerBuildModifierAttribute.cs" />
+    <Compile Include="Library/PackageCache/com.unity.test-framework@1.1.33/UnityEditor.TestRunner/TestRunner/Callbacks/EditModeRunnerCallback.cs" />
+    <Compile Include="Library/PackageCache/com.unity.test-framework@1.1.33/UnityEditor.TestRunner/CommandLineTest/Executer.cs" />
+    <Compile Include="Library/PackageCache/com.unity.test-framework@1.1.33/UnityEditor.TestRunner/TestRunner/Utils/EditorAssemblyWrapper.cs" />
+    <Compile Include="Library/PackageCache/com.unity.test-framework@1.1.33/UnityEditor.TestRunner/CommandLineTest/RunData.cs" />
+    <Compile Include="Library/PackageCache/com.unity.test-framework@1.1.33/UnityEditor.TestRunner/Api/ITestRunnerApi.cs" />
+    <Compile Include="Library/PackageCache/com.unity.test-framework@1.1.33/UnityEditor.TestRunner/RequirePlatformSupportAttribute.cs" />
+    <Compile Include="Library/PackageCache/com.unity.test-framework@1.1.33/UnityEditor.TestRunner/TestRunner/EditorEnumeratorTestWorkItem.cs" />
+    <Compile Include="Library/PackageCache/com.unity.test-framework@1.1.33/UnityEditor.TestRunner/TestRunner/Utils/EditorLoadedTestAssemblyProvider.cs" />
+    <Compile Include="Library/PackageCache/com.unity.test-framework@1.1.33/UnityEditor.TestRunner/Api/Analytics/TestTreeData.cs" />
+    <Compile Include="Library/PackageCache/com.unity.test-framework@1.1.33/UnityEditor.TestRunner/TestLaunchers/PrebuildSetupAttributeFinder.cs" />
+    <Compile Include="Library/PackageCache/com.unity.test-framework@1.1.33/UnityEditor.TestRunner/AssemblyInfo.cs" />
+    <Compile Include="Library/PackageCache/com.unity.test-framework@1.1.33/UnityEditor.TestRunner/TestRun/Tasks/SaveModiedSceneTask.cs" />
+    <Compile Include="Library/PackageCache/com.unity.test-framework@1.1.33/UnityEditor.TestRunner/TestRun/Tasks/PerformUndoTask.cs" />
+    <Compile Include="Library/PackageCache/com.unity.test-framework@1.1.33/UnityEditor.TestRunner/TestRunner/Utils/EditorCompilationInterfaceProxy.cs" />
+    <Compile Include="Library/PackageCache/com.unity.test-framework@1.1.33/UnityEditor.TestRunner/GUI/Views/TestListGUIBase.cs" />
+    <Compile Include="Library/PackageCache/com.unity.test-framework@1.1.33/UnityEditor.TestRunner/CommandLineParser/CommandLineOption.cs" />
+    <Compile Include="Library/PackageCache/com.unity.test-framework@1.1.33/UnityEditor.TestRunner/CommandLineParser/ICommandLineOption.cs" />
+    <Compile Include="Library/PackageCache/com.unity.test-framework@1.1.33/UnityEditor.TestRunner/UnityTestProtocol/TestState.cs" />
+    <Compile Include="Library/PackageCache/com.unity.test-framework@1.1.33/UnityEditor.TestRunner/TestLaunchers/PlatformSetup/XboxOnePlatformSetup.cs" />
+    <Compile Include="Library/PackageCache/com.unity.test-framework@1.1.33/UnityEditor.TestRunner/Api/Analytics/RunFinishedData.cs" />
+    <Compile Include="Library/PackageCache/com.unity.test-framework@1.1.33/UnityEditor.TestRunner/CommandLineTest/TestStarter.cs" />
+    <Compile Include="Library/PackageCache/com.unity.test-framework@1.1.33/UnityEditor.TestRunner/TestRunner/Callbacks/TestRunnerCallback.cs" />
+    <Compile Include="Library/PackageCache/com.unity.test-framework@1.1.33/UnityEditor.TestRunner/GUI/TestListBuilder/RenderingOptions.cs" />
+    <Compile Include="Library/PackageCache/com.unity.test-framework@1.1.33/UnityEditor.TestRunner/UnityTestProtocol/IUtpMessageReporter.cs" />
+    <Compile Include="Library/PackageCache/com.unity.test-framework@1.1.33/UnityEditor.TestRunner/TestRunner/Utils/TestListCacheData.cs" />
+    <Compile Include="Library/PackageCache/com.unity.test-framework@1.1.33/UnityEditor.TestRunner/CommandLineTest/RunSettings.cs" />
+    <Compile Include="Library/PackageCache/com.unity.test-framework@1.1.33/UnityEditor.TestRunner/TestLaunchers/TestLauncherBase.cs" />
+    <Compile Include="Library/PackageCache/com.unity.test-framework@1.1.33/UnityEditor.TestRunner/GUI/TestListTreeView/TestListTreeViewDataSource.cs" />
+    <Compile Include="Library/PackageCache/com.unity.test-framework@1.1.33/UnityEditor.TestRunner/Api/TestRunnerApi.cs" />
+    <Compile Include="Library/PackageCache/com.unity.test-framework@1.1.33/UnityEditor.TestRunner/UnityTestProtocol/IUtpLogger.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Assets/TextMesh Pro/Shaders/TMPro.cginc" />
-    <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile Overlay.shader" />
-    <None Include="Assets/TextMesh Pro/Shaders/TMP_Bitmap.shader" />
-    <None Include="Assets/TextMesh Pro/Shaders/TMPro_Mobile.cginc" />
-    <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF SSD.shader" />
-    <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF-Surface-Mobile.shader" />
-    <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF-Surface.shader" />
-    <None Include="Assets/TextMesh Pro/Sprites/EmojiOne Attribution.txt" />
-    <None Include="Assets/TextMesh Pro/Shaders/TMP_Bitmap-Custom-Atlas.shader" />
-    <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF.shader" />
-    <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile SSD.shader" />
-    <None Include="Assets/TextMesh Pro/Resources/LineBreaking Leading Characters.txt" />
-    <None Include="Assets/TextMesh Pro/Shaders/TMPro_Properties.cginc" />
-    <None Include="Assets/TextMesh Pro/Shaders/TMPro_Surface.cginc" />
-    <None Include="Assets/TextMesh Pro/Resources/LineBreaking Following Characters.txt" />
-    <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile Masking.shader" />
-    <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF Overlay.shader" />
-    <None Include="Assets/TextMesh Pro/Shaders/TMP_Bitmap-Mobile.shader" />
-    <None Include="Assets/TextMesh Pro/Fonts/LiberationSans - OFL.txt" />
-    <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile.shader" />
-    <None Include="Assets/TextMesh Pro/Shaders/TMP_Sprite.shader" />
+    <None Include="Library/PackageCache/com.unity.test-framework@1.1.33/UnityEditor.TestRunner/UnityEditor.TestRunner.asmdef" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
@@ -212,6 +328,10 @@
     </Reference>
     <Reference Include="UnityEngine.LocalizationModule">
       <HintPath>/Applications/Unity/Hub/Editor/2021.3.34f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.LocalizationModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.NVIDIAModule">
+      <HintPath>/Applications/Unity/Hub/Editor/2021.3.34f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.NVIDIAModule.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.ParticleSystemModule">
@@ -442,16 +562,24 @@
       <HintPath>/Applications/Unity/Hub/Editor/2021.3.34f1/Unity.app/Contents/Managed/UnityEngine/UnityEditor.UnityConnectModule.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="0Harmony">
-      <HintPath>Assets/Plugins/Harmony/net48/0Harmony.dll</HintPath>
+    <Reference Include="UnityEditor.Graphs">
+      <HintPath>/Applications/Unity/Hub/Editor/2021.3.34f1/Unity.app/Contents/Managed/UnityEditor.Graphs.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="Unity.VisualScripting.Antlr3.Runtime">
-      <HintPath>Library/PackageCache/com.unity.visualscripting@1.8.0/Runtime/VisualScripting.Flow/Dependencies/NCalc/Unity.VisualScripting.Antlr3.Runtime.dll</HintPath>
+    <Reference Include="UnityEditor.OSXStandalone.Extensions">
+      <HintPath>/Applications/Unity/Hub/Editor/2021.3.34f1/Unity.app/Contents/PlaybackEngines/MacStandaloneSupport/UnityEditor.OSXStandalone.Extensions.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="Aspose.PSD">
-      <HintPath>Assets/Plugins/Aspose.PSD.dll</HintPath>
+    <Reference Include="UnityEditor.Android.Extensions">
+      <HintPath>/Applications/Unity/Hub/Editor/2021.3.34f1/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEditor.iOS.Extensions">
+      <HintPath>/Applications/Unity/Hub/Editor/2021.3.34f1/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="nunit.framework">
+      <HintPath>Library/PackageCache/com.unity.ext.nunit@1.0.6/net35/unity-custom/nunit.framework.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="UnityEditor.iOS.Extensions.Xcode">
@@ -970,80 +1098,9 @@
       <HintPath>/Applications/Unity/Hub/Editor/2021.3.34f1/Unity.app/Contents/UnityReferenceAssemblies/unity-4.8-api/Facades/netstandard.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="Unity.VisualScripting.Flow.Editor">
-      <HintPath>Library/ScriptAssemblies/Unity.VisualScripting.Flow.Editor.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Unity.VisualScripting.Shared.Editor">
-      <HintPath>Library/ScriptAssemblies/Unity.VisualScripting.Shared.Editor.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Unity.TextMeshPro.Editor">
-      <HintPath>Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Unity.VisualStudio.Editor">
-      <HintPath>Library/ScriptAssemblies/Unity.VisualStudio.Editor.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Unity.Timeline.Editor">
-      <HintPath>Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Unity.Timeline">
-      <HintPath>Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Unity.VisualScripting.Core.Editor">
-      <HintPath>Library/ScriptAssemblies/Unity.VisualScripting.Core.Editor.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Unity.TextMeshPro">
-      <HintPath>Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Unity.VisualScripting.State.Editor">
-      <HintPath>Library/ScriptAssemblies/Unity.VisualScripting.State.Editor.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Unity.VisualScripting.SettingsProvider.Editor">
-      <HintPath>Library/ScriptAssemblies/Unity.VisualScripting.SettingsProvider.Editor.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Unity.2D.Sprite.Editor">
-      <HintPath>Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Unity.VisualScripting.Flow">
-      <HintPath>Library/ScriptAssemblies/Unity.VisualScripting.Flow.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="UnityEditor.UI">
-      <HintPath>Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Unity.PlasticSCM.Editor">
-      <HintPath>Library/ScriptAssemblies/Unity.PlasticSCM.Editor.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="UnityEngine.UI">
-      <HintPath>Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Unity.VisualScripting.State">
-      <HintPath>Library/ScriptAssemblies/Unity.VisualScripting.State.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Unity.VisualScripting.Core">
-      <HintPath>Library/ScriptAssemblies/Unity.VisualScripting.Core.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Unity.EditorCoroutines.Editor">
-      <HintPath>Library/ScriptAssemblies/Unity.EditorCoroutines.Editor.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="UnityEngine.TestRunner.csproj" />
   </ItemGroup>
   <Import Project="Sdk.targets" Sdk="Microsoft.NET.Sdk" />
   <ItemGroup>

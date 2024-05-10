@@ -19,7 +19,7 @@
     <RootNamespace></RootNamespace>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <AssemblyName>Assembly-CSharp</AssemblyName>
+    <AssemblyName>Assembly-CSharp-firstpass</AssemblyName>
     <TargetFramework>netstandard2.1</TargetFramework>
     <BaseDirectory>.</BaseDirectory>
   </PropertyGroup>
@@ -54,7 +54,7 @@
     <UnityProjectGenerator>Package</UnityProjectGenerator>
     <UnityProjectGeneratorVersion>2.0.22</UnityProjectGeneratorVersion>
     <UnityProjectGeneratorStyle>SDK</UnityProjectGeneratorStyle>
-    <UnityProjectType>Game:1</UnityProjectType>
+    <UnityProjectType>GamePlugins:3</UnityProjectType>
     <UnityBuildTarget>StandaloneOSX:2</UnityBuildTarget>
     <UnityVersion>2021.3.34f1</UnityVersion>
   </PropertyGroup>
@@ -62,56 +62,74 @@
     <Analyzer Include="/Users/ganshuangfeng/.vscode/extensions/visualstudiotoolsforunity.vstuc-0.9.4/Analyzers/Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets/PSD2UIForm/ScriptableSignleton.cs" />
-    <Compile Include="Assets/PSD2UIForm/Psd2UIFormConverter.cs" />
-    <Compile Include="Assets/PSD2UIForm/UIHelpers/TMPButtonHelper.cs" />
-    <Compile Include="Assets/PSD2UIForm/Utility.Assembly.cs" />
-    <Compile Include="Assets/PSD2UIForm/UIStringKey.cs" />
-    <Compile Include="Assets/PSD2UIForm/UIHelpers/TMPDropdownHelper.cs" />
-    <Compile Include="Assets/PSD2UIForm/UIHelpers/RawImageHelper.cs" />
-    <Compile Include="Assets/PSD2UIForm/UIHelpers/TMPTextHelper.cs" />
-    <Compile Include="Assets/PSD2UIForm/UIHelpers/TMPToggleHelper.cs" />
-    <Compile Include="Assets/PSD2UIForm/UIHelpers/ImageHelper.cs" />
-    <Compile Include="Assets/PSD2UIForm/PsdLayerNode.cs" />
-    <Compile Include="Assets/PSD2UIForm/UIHelpers/DropdownHelper.cs" />
-    <Compile Include="Assets/PSD2UIForm/UIHelpers/InputFieldHelper.cs" />
-    <Compile Include="Assets/PSD2UIForm/PsdLayerType.cs" />
-    <Compile Include="Assets/PSD2UIForm/UIHelpers/TMPInputFieldHelper.cs" />
-    <Compile Include="Assets/PSD2UIForm/UIHelpers/MaskHelper.cs" />
-    <Compile Include="Assets/PSD2UIForm/UIHelpers/ToggleHelper.cs" />
-    <Compile Include="Assets/PSD2UIForm/Psd2UIFormSettings.cs" />
-    <Compile Include="Assets/PSD2UIForm/UIHelpers/SliderHelper.cs" />
-    <Compile Include="Assets/PSD2UIForm/UIHelpers/ScrollViewHelper.cs" />
-    <Compile Include="Assets/PSD2UIForm/UIHelpers/FillColorHelper.cs" />
-    <Compile Include="Assets/PSD2UIForm/UIHelpers/ButtonHelper.cs" />
-    <Compile Include="Assets/PSD2UIForm/UGUIParser.cs" />
-    <Compile Include="Assets/PSD2UIForm/UIHelpers/UIHelperBase.cs" />
-    <Compile Include="Assets/PSD2UIForm/ReadOnlyFieldAttribute.cs" />
-    <Compile Include="Assets/PSD2UIForm/UIHelpers/TextHelper.cs" />
-    <Compile Include="Assets/PSD2UIForm/AsposePsdExtension.cs" />
+    <Compile Include="Assets/Plugins/Harmony/Harmony/Tools/Extensions.cs" />
+    <Compile Include="Assets/Plugins/Harmony/Harmony/Documentation/examples/annotations_multiple.cs" />
+    <Compile Include="Assets/Plugins/Harmony/Harmony/Internal/AccessCache.cs" />
+    <Compile Include="Assets/Plugins/Harmony/Harmony/Documentation/examples/patching-edgecases.cs" />
+    <Compile Include="Assets/Plugins/Harmony/Harmony/Internal/ByteBuffer.cs" />
+    <Compile Include="Assets/Plugins/Harmony/Harmony/Documentation/examples/patching-auxilary.cs" />
+    <Compile Include="Assets/Plugins/Harmony/Harmony/Documentation/examples/execution_with.cs" />
+    <Compile Include="Assets/Plugins/Harmony/Harmony/Extras/FastAccess.cs" />
+    <Compile Include="Assets/Plugins/Harmony/Harmony/Internal/PatchArgumentExtensions.cs" />
+    <Compile Include="Assets/Plugins/Harmony/Harmony/Tools/CodeMatch.cs" />
+    <Compile Include="Assets/Plugins/Harmony/Harmony/Internal/InlineSignatureParser.cs" />
+    <Compile Include="Assets/Plugins/Harmony/Harmony/Documentation/examples/patching-postfix.cs" />
+    <Compile Include="Assets/Plugins/Harmony/Harmony/Public/Harmony.cs" />
+    <Compile Include="Assets/Plugins/Harmony/Harmony/Tools/Code.cs" />
+    <Compile Include="Assets/Plugins/Harmony/Harmony/Internal/Emitter.cs" />
+    <Compile Include="Assets/Plugins/Harmony/Harmony/Documentation/examples/execution_without.cs" />
+    <Compile Include="Assets/Plugins/Harmony/Harmony/Internal/MethodCopier.cs" />
+    <Compile Include="Assets/Plugins/Harmony/Harmony/Documentation/examples/annotations_combining.cs" />
+    <Compile Include="Assets/Plugins/Harmony/Harmony/Properties/AssemblyInfo.cs" />
+    <Compile Include="Assets/Plugins/Harmony/Harmony/Internal/ILInstruction.cs" />
+    <Compile Include="Assets/Plugins/Harmony/Harmony/Public/InlineSignature.cs" />
+    <Compile Include="Assets/Plugins/Harmony/Harmony/Extras/DelegateTypeFactory.cs" />
+    <Compile Include="Assets/Plugins/Harmony/Harmony/Public/PatchJsonConverter.cs" />
+    <Compile Include="Assets/Plugins/Harmony/Harmony/Documentation/examples/priorities.cs" />
+    <Compile Include="Assets/Plugins/Harmony/Harmony/Internal/Memory.cs" />
+    <Compile Include="Assets/Plugins/Harmony/Harmony/Documentation/examples/annotations_basic.cs" />
+    <Compile Include="Assets/Plugins/Harmony/Harmony/Internal/MethodPatcher.cs" />
+    <Compile Include="Assets/Plugins/Harmony/Harmony/Documentation/examples/patching-finalizer.cs" />
+    <Compile Include="Assets/Plugins/Harmony/Harmony/GlobalSuppressions.cs" />
+    <Compile Include="Assets/Plugins/Harmony/Harmony/Internal/StructReturnBufferCheck.cs" />
+    <Compile Include="Assets/Plugins/Harmony/Harmony/Tools/Traverse.cs" />
+    <Compile Include="Assets/Plugins/Harmony/Harmony/Documentation/examples/patching-transpiler.cs" />
+    <Compile Include="Assets/Plugins/Harmony/Harmony/Tools/Tools.cs" />
+    <Compile Include="Assets/Plugins/Harmony/Harmony/Internal/PatchTools.cs" />
+    <Compile Include="Assets/Plugins/Harmony/Harmony/Documentation/examples/utilities.cs" />
+    <Compile Include="Assets/Plugins/Harmony/Harmony/Public/Transpilers.cs" />
+    <Compile Include="Assets/Plugins/Harmony/Harmony/Public/Priority.cs" />
+    <Compile Include="Assets/Plugins/Harmony/Harmony/Internal/CodeTranspiler.cs" />
+    <Compile Include="Assets/Plugins/Harmony/Harmony/Public/HarmonyException.cs" />
+    <Compile Include="Assets/Plugins/Harmony/Harmony/Public/ExceptionBlock.cs" />
+    <Compile Include="Assets/Plugins/Harmony/Harmony/Tools/FileLog.cs" />
+    <Compile Include="Assets/Plugins/Harmony/Harmony/Documentation/examples/basics.cs" />
+    <Compile Include="Assets/Plugins/Harmony/Harmony/Documentation/examples/intro_somegame.cs" />
+    <Compile Include="Assets/Plugins/Harmony/Harmony/Documentation/GlobalSuppressions.cs" />
+    <Compile Include="Assets/Plugins/Harmony/Harmony/Documentation/examples/patching-prefix.cs" />
+    <Compile Include="Assets/Plugins/Harmony/Harmony/Internal/PatchFunctions.cs" />
+    <Compile Include="Assets/Plugins/Harmony/Harmony/Public/PatchClassProcessor.cs" />
+    <Compile Include="Assets/Plugins/Harmony/Harmony/Public/ReversePatcher.cs" />
+    <Compile Include="Assets/Plugins/Harmony/Harmony/Documentation/examples/intro_annotations.cs" />
+    <Compile Include="Assets/Plugins/Harmony/Harmony/Tools/CodeMatcher.cs" />
+    <Compile Include="Assets/Plugins/Harmony/Harmony/Internal/HarmonySharedState.cs" />
+    <Compile Include="Assets/Plugins/Harmony/Harmony/Public/HarmonyMethod.cs" />
+    <Compile Include="Assets/Plugins/Harmony/Harmony/Public/Patches.cs" />
+    <Compile Include="Assets/Plugins/Harmony/Harmony/Internal/PatchSorter.cs" />
+    <Compile Include="Assets/Plugins/Harmony/Harmony/Extras/MethodInvoker.cs" />
+    <Compile Include="Assets/Plugins/Harmony/Harmony/Documentation/examples/reverse-patching.cs" />
+    <Compile Include="Assets/Plugins/Harmony/Harmony/Public/Patch.cs" />
+    <Compile Include="Assets/Plugins/Harmony/Harmony/Tools/AccessTools.cs" />
+    <Compile Include="Assets/Plugins/Harmony/Harmony/Public/CodeInstruction.cs" />
+    <Compile Include="Assets/Plugins/Harmony/Harmony/Internal/PatchModels.cs" />
+    <Compile Include="Assets/Plugins/Harmony/Harmony/Public/PatchProcessor.cs" />
+    <Compile Include="Assets/Plugins/Harmony/Harmony/Tools/SymbolExtensions.cs" />
+    <Compile Include="Assets/Plugins/Harmony/Harmony/Public/Attributes.cs" />
+    <Compile Include="Assets/Plugins/Harmony/Harmony/Documentation/examples/intro_manual.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Assets/TextMesh Pro/Shaders/TMPro.cginc" />
-    <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile Overlay.shader" />
-    <None Include="Assets/TextMesh Pro/Shaders/TMP_Bitmap.shader" />
-    <None Include="Assets/TextMesh Pro/Shaders/TMPro_Mobile.cginc" />
-    <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF SSD.shader" />
-    <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF-Surface-Mobile.shader" />
-    <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF-Surface.shader" />
-    <None Include="Assets/TextMesh Pro/Sprites/EmojiOne Attribution.txt" />
-    <None Include="Assets/TextMesh Pro/Shaders/TMP_Bitmap-Custom-Atlas.shader" />
-    <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF.shader" />
-    <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile SSD.shader" />
-    <None Include="Assets/TextMesh Pro/Resources/LineBreaking Leading Characters.txt" />
-    <None Include="Assets/TextMesh Pro/Shaders/TMPro_Properties.cginc" />
-    <None Include="Assets/TextMesh Pro/Shaders/TMPro_Surface.cginc" />
-    <None Include="Assets/TextMesh Pro/Resources/LineBreaking Following Characters.txt" />
-    <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile Masking.shader" />
-    <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF Overlay.shader" />
-    <None Include="Assets/TextMesh Pro/Shaders/TMP_Bitmap-Mobile.shader" />
-    <None Include="Assets/TextMesh Pro/Fonts/LiberationSans - OFL.txt" />
-    <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile.shader" />
-    <None Include="Assets/TextMesh Pro/Shaders/TMP_Sprite.shader" />
+    <None Include="Assets/Plugins/Aspose.PSD.dll" />
+    <None Include="Assets/Plugins/Aspose.PSD.xml" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
@@ -440,10 +458,6 @@
     </Reference>
     <Reference Include="UnityEditor.UnityConnectModule">
       <HintPath>/Applications/Unity/Hub/Editor/2021.3.34f1/Unity.app/Contents/Managed/UnityEngine/UnityEditor.UnityConnectModule.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="0Harmony">
-      <HintPath>Assets/Plugins/Harmony/net48/0Harmony.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Unity.VisualScripting.Antlr3.Runtime">
@@ -970,80 +984,25 @@
       <HintPath>/Applications/Unity/Hub/Editor/2021.3.34f1/Unity.app/Contents/UnityReferenceAssemblies/unity-4.8-api/Facades/netstandard.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="Unity.VisualScripting.Flow.Editor">
-      <HintPath>Library/ScriptAssemblies/Unity.VisualScripting.Flow.Editor.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Unity.VisualScripting.Shared.Editor">
-      <HintPath>Library/ScriptAssemblies/Unity.VisualScripting.Shared.Editor.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Unity.TextMeshPro.Editor">
-      <HintPath>Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Unity.VisualStudio.Editor">
-      <HintPath>Library/ScriptAssemblies/Unity.VisualStudio.Editor.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Unity.Timeline.Editor">
-      <HintPath>Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Unity.Timeline">
-      <HintPath>Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Unity.VisualScripting.Core.Editor">
-      <HintPath>Library/ScriptAssemblies/Unity.VisualScripting.Core.Editor.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Unity.TextMeshPro">
-      <HintPath>Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Unity.VisualScripting.State.Editor">
-      <HintPath>Library/ScriptAssemblies/Unity.VisualScripting.State.Editor.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Unity.VisualScripting.SettingsProvider.Editor">
-      <HintPath>Library/ScriptAssemblies/Unity.VisualScripting.SettingsProvider.Editor.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Unity.2D.Sprite.Editor">
-      <HintPath>Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Unity.VisualScripting.Flow">
-      <HintPath>Library/ScriptAssemblies/Unity.VisualScripting.Flow.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="UnityEditor.UI">
-      <HintPath>Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Unity.PlasticSCM.Editor">
-      <HintPath>Library/ScriptAssemblies/Unity.PlasticSCM.Editor.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="UnityEngine.UI">
-      <HintPath>Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Unity.VisualScripting.State">
-      <HintPath>Library/ScriptAssemblies/Unity.VisualScripting.State.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Unity.VisualScripting.Core">
-      <HintPath>Library/ScriptAssemblies/Unity.VisualScripting.Core.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Unity.EditorCoroutines.Editor">
-      <HintPath>Library/ScriptAssemblies/Unity.EditorCoroutines.Editor.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="Unity.VisualScripting.Flow.Editor.csproj" />
+    <ProjectReference Include="Unity.VisualScripting.Shared.Editor.csproj" />
+    <ProjectReference Include="Unity.TextMeshPro.Editor.csproj" />
+    <ProjectReference Include="Unity.VisualStudio.Editor.csproj" />
+    <ProjectReference Include="Unity.Timeline.Editor.csproj" />
+    <ProjectReference Include="Unity.Timeline.csproj" />
+    <ProjectReference Include="Unity.VisualScripting.Core.Editor.csproj" />
+    <ProjectReference Include="Unity.TextMeshPro.csproj" />
+    <ProjectReference Include="Unity.VisualScripting.State.Editor.csproj" />
+    <ProjectReference Include="Unity.VisualScripting.SettingsProvider.Editor.csproj" />
+    <ProjectReference Include="Unity.2D.Sprite.Editor.csproj" />
+    <ProjectReference Include="Unity.VisualScripting.Flow.csproj" />
+    <ProjectReference Include="UnityEditor.UI.csproj" />
+    <ProjectReference Include="Unity.PlasticSCM.Editor.csproj" />
+    <ProjectReference Include="UnityEngine.UI.csproj" />
+    <ProjectReference Include="Unity.VisualScripting.State.csproj" />
+    <ProjectReference Include="Unity.VisualScripting.Core.csproj" />
   </ItemGroup>
   <Import Project="Sdk.targets" Sdk="Microsoft.NET.Sdk" />
   <ItemGroup>

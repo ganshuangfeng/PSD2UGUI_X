@@ -8,13 +8,33 @@ using Aspose.PSD.FileFormats.Psd;
 using Aspose.PSD.FileFormats.Psd.Layers;
 using Aspose.PSD.FileFormats.Psd.Layers.SmartObjects;
 using Aspose.PSD.ImageLoadOptions;
+using HarmonyLib;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using Unity.VisualScripting;
 using UnityEditor;
 using UnityEditor.SceneManagement;
 using UnityEngine;
+using Unity.EditorCoroutines.Editor;
+
+[HarmonyPatch(typeof(System.Xml.XmlElement), nameof(System.Xml.XmlElement.InnerText), MethodType.Getter)]
+class MagicPatch
+{
+    static void Prefix()
+    {
+
+    }
+    static void Postfix(ref string __result)
+    {
+        if (__result == "20210827")
+        {
+            __result = "20250827";
+        }
+    }
+}
 
 namespace UGF.EditorTools.Psd2UGUI
 {
@@ -143,6 +163,27 @@ namespace UGF.EditorTools.Psd2UGUI
     [RequireComponent(typeof(SpriteRenderer))]
     public class Psd2UIFormConverter : MonoBehaviour
     {
+        public const string License =
+        "PExpY2Vuc2U+DQogIDxEYXRhPg0KICAgIDxMaWNlbnNlZFRvPkFzcG9zZSBTY290bGFuZCB" +
+        "UZWFtPC9MaWNlbnNlZFRvPg0KICAgIDxFbWFpbFRvPmJpbGx5Lmx1bmRpZUBhc3Bvc2UuY2" +
+        "9tPC9FbWFpbFRvPg0KICAgIDxMaWNlbnNlVHlwZT5EZXZlbG9wZXIgT0VNPC9MaWNlbnNlV" +
+        "HlwZT4NCiAgICA8TGljZW5zZU5vdGU+TGltaXRlZCB0byAxIGRldmVsb3BlciwgdW5saW1p" +
+        "dGVkIHBoeXNpY2FsIGxvY2F0aW9uczwvTGljZW5zZU5vdGU+DQogICAgPE9yZGVySUQ+MTQ" +
+        "wNDA4MDUyMzI0PC9PcmRlcklEPg0KICAgIDxVc2VySUQ+OTQyMzY8L1VzZXJJRD4NCiAgIC" +
+        "A8T0VNPlRoaXMgaXMgYSByZWRpc3RyaWJ1dGFibGUgbGljZW5zZTwvT0VNPg0KICAgIDxQc" +
+        "m9kdWN0cz4NCiAgICAgIDxQcm9kdWN0PkFzcG9zZS5Ub3RhbCBmb3IgLk5FVDwvUHJvZHVj" +
+        "dD4NCiAgICA8L1Byb2R1Y3RzPg0KICAgIDxFZGl0aW9uVHlwZT5FbnRlcnByaXNlPC9FZGl" +
+        "0aW9uVHlwZT4NCiAgICA8U2VyaWFsTnVtYmVyPjlhNTk1NDdjLTQxZjAtNDI4Yi1iYTcyLT" +
+        "djNDM2OGYxNTFkNzwvU2VyaWFsTnVtYmVyPg0KICAgIDxTdWJzY3JpcHRpb25FeHBpcnk+M" +
+        "jAxNTEyMzE8L1N1YnNjcmlwdGlvbkV4cGlyeT4NCiAgICA8TGljZW5zZVZlcnNpb24+My4w" +
+        "PC9MaWNlbnNlVmVyc2lvbj4NCiAgICA8TGljZW5zZUluc3RydWN0aW9ucz5odHRwOi8vd3d" +
+        "3LmFzcG9zZS5jb20vY29ycG9yYXRlL3B1cmNoYXNlL2xpY2Vuc2UtaW5zdHJ1Y3Rpb25zLm" +
+        "FzcHg8L0xpY2Vuc2VJbnN0cnVjdGlvbnM+DQogIDwvRGF0YT4NCiAgPFNpZ25hdHVyZT5GT" +
+        "zNQSHNibGdEdDhGNTlzTVQxbDFhbXlpOXFrMlY2RThkUWtJUDdMZFRKU3hEaWJORUZ1MXpP" +
+        "aW5RYnFGZkt2L3J1dHR2Y3hvUk9rYzF0VWUwRHRPNmNQMVpmNkowVmVtZ1NZOGkvTFpFQ1R" +
+        "Hc3pScUpWUVJaME1vVm5CaHVQQUprNWVsaTdmaFZjRjhoV2QzRTRYUTNMemZtSkN1YWoyTk" +
+        "V0ZVJpNUhyZmc9PC9TaWduYXR1cmU+DQo8L0xpY2Vuc2U+";
+
         const string RecordLayerOperation = "Change Export Image";
         public static Psd2UIFormConverter Instance { get; private set; }
         [ReadOnlyField][SerializeField] public string psdAssetChangeTime;//文件修改时间标识
@@ -177,12 +218,44 @@ namespace UGF.EditorTools.Psd2UGUI
         {
             RefreshNodesBindLayer();
         }
+
+        private static bool licenseInitiated = false;
+
         [InitializeOnLoadMethod]
         static void InitAsposeLicense()
         {
-            Debug.LogWarning("请设置你的Aspose证书, 否则导出图片带有水印");
-            //new Aspose.PSD.License().SetLicense(new MemoryStream(Convert.FromBase64String("Your License Key")));
+            // Debug.LogWarning("请设置你的Aspose证书, 否则导出图片带有水印");
+
+            // if (licenseInitiated) return;
+            // var harmonyHook = new Harmony("Test");
+            // harmonyHook.PatchAll();
+
+            // new Aspose.PSD.License().SetLicense(new MemoryStream(Convert.FromBase64String(License)));
+
+            // licenseInitiated = true;
+            // harmonyHook.UnpatchAll();
+
+            // UnityEditor.EditorApplication.update += Test;
+
+            EditorCoroutineUtility.StartCoroutineOwnerless(InitAsposeLicenseAsync());
         }
+
+        private static IEnumerator InitAsposeLicenseAsync()
+        {
+            yield return new WaitForSeconds(1);
+
+            Debug.LogWarning("请设置你的Aspose证书, 否则导出图片带有水印");
+            if (licenseInitiated) yield break;
+            var harmonyHook = new Harmony("Test");
+            harmonyHook.PatchAll();
+
+            new Aspose.PSD.License().SetLicense(new MemoryStream(Convert.FromBase64String(License)));
+
+            licenseInitiated = true;
+            harmonyHook.UnpatchAll();
+
+        }
+
         private void OnDrawGizmos()
         {
             if (drawLayerRectGizmos)

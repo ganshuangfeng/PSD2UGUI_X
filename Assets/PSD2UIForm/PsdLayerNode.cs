@@ -12,6 +12,7 @@ using System.IO;
 using System.Linq;
 using Aspose.PSD.FileFormats.Psd;
 using Aspose.PSD.FileFormats.Psd.Layers.SmartObjects;
+using Unity.VisualScripting;
 
 namespace UGF.EditorTools.Psd2UGUI
 {
@@ -168,6 +169,8 @@ namespace UGF.EditorTools.Psd2UGUI
                 var bytes = PreviewTexture.EncodeToPNG();
                 var imgName = string.Format("{0}_{1}", string.IsNullOrWhiteSpace(name) ? UIType.ToString() : name, BindPsdLayerIndex);
                 var exportDir = Psd2UIFormConverter.Instance.GetUIFormImagesOutputDir();
+                // 替换exportDir中的/为\
+                exportDir = exportDir.Replace("\\", "/");
                 if (!Directory.Exists(exportDir))
                 {
                     try
@@ -181,6 +184,10 @@ namespace UGF.EditorTools.Psd2UGUI
                     }
                 }
                 var imgFileName = Path.Combine(exportDir, imgName + ".png");
+                if (!File.Exists(imgFileName))
+                {
+                    File.Create(imgFileName).Dispose();
+                }
                 File.WriteAllBytes(imgFileName, bytes);
                 //if (Psd2UIFormSettings.Instance.CompressImage)
                 //{
